@@ -10,6 +10,10 @@ export CLICOLOR=1
 # fix gevent block bug
 export GEVENT_RESOLVER=block
 
+if [[ -d "$HOME/.autoenv" ]]; then
+    source "$HOME/.autoenv/activate.sh"
+fi
+
 # make man colorful
 function man() {
     env \
