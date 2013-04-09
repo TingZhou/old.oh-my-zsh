@@ -12,7 +12,9 @@ alias l="ls -l ${colorflag}"
 alias l='ls -l'
 alias ll='ls -ahlF'
 
-alias rm="rm -I"
+if rm -I > /dev/null 2>&1; then
+    alias rm="rm -I"
+fi
 
 alias df='df -h'
 alias lg='ll | grep'
